@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo Banner Chí Bách</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Arial', sans-serif;
+            background: #f5f5f5;
+        }
+        
+        .banner-creator {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .custom-banner {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #ff6b35 0%, #e91e63 50%, #f7931e 100%);
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px 60px;
+            box-sizing: border-box;
+        }
+        
+        .banner-text {
+            flex: 1;
+            color: white;
+            z-index: 2;
+        }
+        
+        .main-title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: #FFD700;
+        }
+        
+        .brand-name {
+            font-size: 52px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: white;
+        }
+        
+        .subtitle {
+            font-size: 42px;
+            font-weight: bold;
+            color: #FFD700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .banner-products {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            z-index: 2;
+        }
+        
+        .product-item {
+            width: 120px;
+            height: 120px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+        
+        .product-placeholder {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: white;
+            text-align: center;
+        }
+        
+        .banner-logo {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: white;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .decorative-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .circle1 {
+            width: 200px;
+            height: 200px;
+            top: -100px;
+            right: -100px;
+        }
+        
+        .circle2 {
+            width: 150px;
+            height: 150px;
+            bottom: -75px;
+            left: -75px;
+        }
+        
+        .circle3 {
+            width: 100px;
+            height: 100px;
+            top: 50%;
+            left: 30%;
+            opacity: 0.5;
+        }
+        
+        .download-btn {
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: #ff6b35;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .download-btn:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255,107,53,0.4);
+        }
+        
+        .instructions {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #ff6b35;
+        }
+        
+        .instructions h3 {
+            color: #ff6b35;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner-creator">
+        <h1>🎨 Tạo Banner Chí Bách</h1>
+        
+        <div class="custom-banner" id="customBanner">
+            <div class="decorative-elements">
+                <div class="circle circle1"></div>
+                <div class="circle circle2"></div>
+                <div class="circle circle3"></div>
+            </div>
+            
+            <div class="banner-text">
+                <div class="main-title">GIA DỤNG</div>
+                <div class="brand-name">Chí Bách</div>
+                <div class="subtitle">CHIA SẺ VIỆC NHÀ</div>
+            </div>
+            
+            <div class="banner-products">
+                <div class="product-item">
+                    <div class="product-placeholder">Nồi cơm điện</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-placeholder">Máy xay</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-placeholder">Bếp từ</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-placeholder">Máy ép</div>
+                </div>
+            </div>
+            
+            <div class="banner-logo">CB</div>
+        </div>
+        
+        <button class="download-btn" onclick="downloadBanner()">📥 Tải xuống Banner</button>
+        
+        <div class="instructions">
+            <h3>📋 Hướng dẫn sử dụng:</h3>
+            <ol>
+                <li>Banner đã được tạo với tên "Chí Bách" thay thế "Hangxingiatot.com"</li>
+                <li>Click nút "Tải xuống Banner" để lưu hình ảnh</li>
+                <li>Thay thế file banner cũ trong thư mục images/</li>
+                <li>Refresh website để xem thay đổi</li>
+            </ol>
+            <p><strong>Lưu ý:</strong> Banner mới có thiết kế tương tự nhưng với branding "Chí Bách"</p>
+        </div>
+    </div>
+
+    <script>
+        function downloadBanner() {
+            // Tạo canvas để render banner
+            const banner = document.getElementById('customBanner');
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Set canvas size
+            canvas.width = 1200;
+            canvas.height = 400;
+            
+            // Create gradient background
+            const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+            gradient.addColorStop(0, '#ff6b35');
+            gradient.addColorStop(0.5, '#e91e63');
+            gradient.addColorStop(1, '#f7931e');
+            
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Add decorative circles
+            ctx.fillStyle = 'rgba(255,255,255,0.1)';
+            ctx.beginPath();
+            ctx.arc(1100, 100, 100, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            ctx.beginPath();
+            ctx.arc(75, 325, 75, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            ctx.beginPath();
+            ctx.arc(360, 200, 50, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Add text
+            ctx.fillStyle = '#FFD700';
+            ctx.font = 'bold 48px Arial';
+            ctx.fillText('GIA DỤNG', 60, 120);
+            
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 52px Arial';
+            ctx.fillText('Chí Bách', 60, 180);
+            
+            ctx.fillStyle = '#FFD700';
+            ctx.font = 'bold 42px Arial';
+            ctx.fillText('CHIA SẺ VIỆC NHÀ', 60, 240);
+            
+            // Add logo
+            ctx.fillStyle = 'rgba(255,255,255,0.2)';
+            ctx.fillRect(1080, 30, 80, 80);
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 36px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('CB', 1120, 80);
+            
+            // Add product placeholders
+            const productX = 700;
+            const productY = 160;
+            const productSize = 80;
+            const gap = 100;
+            
+            for (let i = 0; i < 4; i++) {
+                const x = productX + (i * gap);
+                ctx.fillStyle = 'rgba(255,255,255,0.1)';
+                ctx.fillRect(x, productY, productSize, productSize);
+                
+                ctx.fillStyle = 'rgba(255,255,255,0.3)';
+                ctx.fillRect(x + 10, productY + 10, productSize - 20, productSize - 20);
+            }
+            
+            // Download the canvas as image
+            const link = document.createElement('a');
+            link.download = 'banner-chi-bach.png';
+            link.href = canvas.toDataURL();
+            link.click();
+            
+            alert('✅ Banner "Chí Bách" đã được tải xuống!\n\nBạn có thể thay thế file banner-main.webp trong thư mục images/ bằng file mới này.');
+        }
+    </script>
+</body>
+</html>
